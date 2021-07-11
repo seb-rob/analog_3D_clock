@@ -1,0 +1,85 @@
+:root{
+    --round: 50%;
+    --black: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: goldenrod;
+}
+
+#container{
+    height: 400px;
+    width: 400px;
+    /* border: 1px solid var(--black); */
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--round);
+    box-shadow: 15px 15px 40px rgba(74, 52, 18, 0.7);
+}
+
+#clock{
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid var(--black); */
+    border-radius: var(--round);
+    background: url("clk1.jpg");
+    opacity: 0.7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 15px 15px 40px rgba(74, 52, 18, 0.7);
+}
+
+#hour, #min, #sec{
+    transform-origin: bottom;
+    background-color: var(--black);
+    border-radius: var(--round);
+    position: absolute;
+}
+
+#clock::before{
+    content: "";
+    height:14px;
+    width: 14px;
+    z-index: 40;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: var(--round);
+    background-color: var(--black);
+}
+
+#hour{
+    height: 24%;
+    width: 2%;
+    top: 27%;
+    left: 49%;
+}
+
+#min{
+    height: 32%;
+    width: 1.5%;
+    top: 19%;
+    left: 49%;
+}
+
+#sec{
+    height: 44%;
+    width: 1%;
+    top: 7%;
+    left: 49.5%;
+}
+
+
